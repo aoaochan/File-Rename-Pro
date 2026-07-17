@@ -11,7 +11,7 @@
 ## Roadmap
 
 - [x] Sprint 1 - Basic Rename
-- [ ] Sprint 2 - Preview
+- [x] Sprint 2 - Preview
 - [ ] Sprint 3 - Undo
 - [ ] Sprint 4 - Drag & Drop
 
@@ -22,13 +22,16 @@
 ### Sprint 2 (v0.2)
 - [ ] Preview the changes
 
+#### Known Issues
+- Real-time file detection is not supported.
+
 ### Sprint 1 (v0.1)
 - [x] Select a folder
 - [x] Display File List
 - [x] Rename
 
 #### Known Issues
-- Hidden files are unintentionally renamed
+- Hidden files are unintentionally renamed.
 
 ---
 

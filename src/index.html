@@ -10,15 +10,27 @@
 
   <body>
     <div id="app">
-      <p style="color: black">(*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ</p>
+      <p style="color: black">.</p>
       <button id="btnSelectFolder">Select Folder</button>
       <p id="labelDisplaySelectedFolder">Selected Folder:<br>(...)</p>
       <hr>
-      <p id="labelDisplayFileList">(...)</p>
+      <div id="divPreviewBox">
+        <div class="divPreviewBoxInLists">
+          <p>Before</p>
+          <br>
+          <p id="labelDisplayFileListBefore">(...)</p>
+        </div>
+        <p id="labelDisplayFileListArrow"><br><br>→</p>
+        <div class="divPreviewBoxInLists">
+          <p>After</p>
+          <br>
+          <p id="labelDisplayFileListAfter">(...)</p>
+        </div>
+      </div>
       <hr>
-      <input type="text" id="inputNewName" name="New Name" placeholder="New Name" required>
+      <input type="text" id="inputNewName" name="New Name" placeholder="New Name">
       <button id="btnRename">Rename</button>
-      <p style="color: black">(*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ</p>
+      <p style="color: black">.</p>
     </div>
   </body>
 </html>

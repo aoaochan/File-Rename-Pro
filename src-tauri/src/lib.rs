@@ -1,18 +1,40 @@
+// =====================================================================================================
+// 1. Requires
+// =====================================================================================================
 use rfd::FileDialog;
 use std::path::PathBuf;
 use std::sync::Mutex;
 
+
+
+// =====================================================================================================
+// 2. Struct
+// =====================================================================================================
+// -----------------------------------------------------------------------------------------------------
+// 2-1. for Select Folder Function
+// -----------------------------------------------------------------------------------------------------
 #[derive(serde::Serialize)]
 struct FolderContent {
     path: String,
     files: Vec<String>,
 }
 
+// -----------------------------------------------------------------------------------------------------
+// 2-2. for Saving Path
+// -----------------------------------------------------------------------------------------------------
 #[derive(Default)]
 struct FolderState {
     path: Mutex<Option<PathBuf>>,
 }
 
+
+
+// =====================================================================================================
+// 3. Functions (Tauri Command)
+// =====================================================================================================
+// -----------------------------------------------------------------------------------------------------
+// 3-1. Select Folder
+// -----------------------------------------------------------------------------------------------------
 #[tauri::command]
 fn select_folder(state: tauri::State<'_, FolderState>) -> Option<FolderContent> {
     if let Some(path) = FileDialog::new().pick_folder() {
@@ -28,12 +50,16 @@ fn select_folder(state: tauri::State<'_, FolderState>) -> Option<FolderContent> 
                 if let Ok(file_type) = entry.file_type() {
                     if file_type.is_file() {
                         if let Some(name) = entry.file_name().to_str() {
-                            file_names.push(name.to_string());
+                            if !name.starts_with('.') {
+                                file_names.push(name.to_string());
+                            }
                         }
                     }
                 }
             }
         }
+
+        file_names.sort();
 
         Some(FolderContent {
             path: path_str,
@@ -44,6 +70,9 @@ fn select_folder(state: tauri::State<'_, FolderState>) -> Option<FolderContent> 
     }
 }
 
+// -----------------------------------------------------------------------------------------------------
+// 3-2. Rename Files
+// -----------------------------------------------------------------------------------------------------
 #[tauri::command]
 fn rename_files(new_name: String, state: tauri::State<'_, FolderState>) -> Result<(), String> {
     let path = {
@@ -62,7 +91,11 @@ fn rename_files(new_name: String, state: tauri::State<'_, FolderState>) -> Resul
         for entry in entries.flatten() {
             if let Ok(file_type) = entry.file_type() {
                 if file_type.is_file() {
-                    file_paths.push(entry.path());
+                    if let Some(name) = entry.file_name().to_str() {
+                        if !name.starts_with('.') {
+                            file_paths.push(entry.path());
+                        }
+                    }
                 }
             }
         }
@@ -70,15 +103,16 @@ fn rename_files(new_name: String, state: tauri::State<'_, FolderState>) -> Resul
 
     file_paths.sort();
 
-    for (index, old_path) in file_paths.into_iter().enumerate() {
+    for (i, old_path) in file_paths.into_iter().enumerate() {
         let extension = old_path
             .extension()
             .and_then(|ext| ext.to_str())
             .unwrap_or("");
+        let index = i + 1;
         let new_file_name = if extension.is_empty() {
-            format!("{}-{:03}", new_name, index + 1)
+            format!("{}-{:03}", new_name, index)
         } else {
-            format!("{}-{:03}.{}", new_name, index + 1, extension)
+            format!("{}-{:03}.{}", new_name, index, extension)
         };
 
         let mut new_path = old_path.clone();
@@ -90,12 +124,17 @@ fn rename_files(new_name: String, state: tauri::State<'_, FolderState>) -> Resul
     Ok(())
 }
 
+
+
+// =====================================================================================================
+// 4. Main (Tauri)
+// =====================================================================================================
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
         .manage(FolderState::default())
-        .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![select_folder, rename_files])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
