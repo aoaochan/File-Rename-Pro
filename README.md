@@ -8,7 +8,19 @@
 
 ---
 
+## Roadmap
+
+- [x] Sprint 1 - Basic Rename
+- [ ] Sprint 2 - Preview
+- [ ] Sprint 3 - Undo
+- [ ] Sprint 4 - Drag & Drop
+
+---
+
 ## Features
+
+### Sprint 2 (v0.2)
+- [ ] Preview the changes
 
 ### Sprint 1 (v0.1)
 - [x] Select a folder
