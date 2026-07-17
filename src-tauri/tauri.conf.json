@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "file-rename-pro",
+  "productName": "FileRenamePro",
   "version": "0.1.0",
   "identifier": "com.aoaochan.file-rename-pro",
   "build": {
@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "file-rename-pro",
+        "title": "File Rename Pro",
         "width": 800,
         "height": 600
       }
