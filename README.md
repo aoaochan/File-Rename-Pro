@@ -20,7 +20,7 @@
 ## Features
 
 ### Sprint 2 (v0.2)
-- [ ] Preview the changes
+- [x] Preview the changes
 
 #### Known Issues
 - Real-time file detection is not supported.
