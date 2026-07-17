@@ -2,6 +2,10 @@
 
 > A lightweight desktop application for batch renaming files.
 
+<p align="center">
+  <img src=".docs/banner.png" alt="File Rename Pro Banner" width="100%">
+</p>
+
 ---
 
 ## Features
@@ -12,7 +16,7 @@
 - [x] Rename
 
 #### Known Issues
-- Issue: Hidden files are unintentionally renamed
+- Hidden files are unintentionally renamed
 
 ---
 
