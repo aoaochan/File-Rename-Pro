@@ -21,6 +21,7 @@
 
 ### Sprint 2 (v0.2)
 - [x] Preview the changes
+  - Prevent files starting with '.' from being added.
 
 #### Known Issues
 - Real-time file detection is not supported.
