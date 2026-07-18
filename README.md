@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src=".docs/icon.png" alt="File Rename Pro Icon" width="25%">
+  <img src=".docs/icon.png" alt="icon" width="25%">
 
   <h1>File Rename Pro</h1>
 
@@ -9,15 +9,15 @@
   <p align="center">
       <a href="https://x.com/aoaochanchan_">
       <img src="https://shields.io/badge/@aoaochanchan__
--111?logo=x&logoColor=fff" alt="Download .AppImage for arm64 Debian-based Linux">
+-111?logo=x&logoColor=fff" alt="x">
     </a>
     <a href="https://bsky.app/profile/aoaoaoaochan.bsky.social">
       <img src="https://shields.io/badge/@aoaoaoaochan.bsky.social
--01A5FF?logo=bluesky&logoColor=E6F2FF" alt="Download .AppImage for arm64 Debian-based Linux">
+-01A5FF?logo=bluesky&logoColor=E6F2FF" alt="bluesky">
     </a>
     <a href="https://www.youtube.com/@aoaochanchan">
       <img src="https://shields.io/badge/@aoaochanchan
--f00?logo=youtube&logoColor=fff" alt="Download .AppImage for arm64 Debian-based Linux">
+-f00?logo=youtube&logoColor=fff" alt="youtube">
     </a>
   </p>
 
