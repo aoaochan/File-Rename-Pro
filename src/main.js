@@ -259,9 +259,15 @@ btnRename.addEventListener('click', () => {
 
   if (newName.length === 0) {
     message("Please enter a new name for the files.", { title: messageTitle, kind: 'error' });
-  } else {
-    renameFiles(newName);
+    return;
   }
+
+  if (!currentFiles || currentFiles.length === 0) {
+    message("Please pick the folder first.", { title: messageTitle, kind: 'error' });
+    return;
+  }
+
+  renameFiles(newName);
 });
 
 // -----------------------------------------------------------------------------------------------------
