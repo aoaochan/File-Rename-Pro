@@ -1,8 +1,10 @@
-<div align="center">
+<div align="center">  
 
-  <img src=".docs/icon.png" alt="icon" width="25%">
-
-  <h1>File Rename Pro</h1>
+  <h1>
+    <img src=".docs/icon.png" alt="icon" width="25%">
+    <br>
+    File Rename Pro
+  </h1>
 
   <strong>A lightweight desktop application for batch renaming files.</strong>
 
