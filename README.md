@@ -151,6 +151,11 @@
 
 #### Known Issues
 - Top menu requires updates, particularly on macOS
+- Program title is repeatedly displayed inside the message box on Linux. (Works correctly on Windows and macOS)
+- ~~Explore using Docker to make Linux builds simpler than using virtual machines.~~ → Plan to use Docker
+- ~~Linux build process needs documentation.~~ → Anticipated to be fixed by adopting Docker and the builder subproject.
+- ~~Need a separate installation guide for Linux (dependencies, etc.).~~ → Also expected to be resolved by introducing the Docker-based build method.
+- ~~Need to change Linux version for build (glibc version issue)~~ → Resolved: `Debian 12.15.0 → Ubuntu 22.04`, `Fedora 44 → Fedora 40`
 
 ### Sprint 2 (v0.2)
 - [x] Preview the changes
