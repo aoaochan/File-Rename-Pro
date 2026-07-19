@@ -10,16 +10,13 @@
 
   <p align="center">
       <a href="https://x.com/aoaochanchan_">
-      <img src="https://shields.io/badge/@aoaochanchan__
--111?logo=x&logoColor=fff" alt="x">
+      <img src="https://shields.io/badge/@aoaochanchan__-111?logo=x&logoColor=fff" alt="x">
     </a>
     <a href="https://bsky.app/profile/aoaoaoaochan.bsky.social">
-      <img src="https://shields.io/badge/@aoaoaoaochan.bsky.social
--01A5FF?logo=bluesky&logoColor=E6F2FF" alt="bluesky">
+      <img src="https://shields.io/badge/@aoaoaoaochan.bsky.social-01A5FF?logo=bluesky&logoColor=E6F2FF" alt="bluesky">
     </a>
     <a href="https://www.youtube.com/@aoaochanchan">
-      <img src="https://shields.io/badge/@aoaochanchan
--f00?logo=youtube&logoColor=fff" alt="youtube">
+      <img src="https://shields.io/badge/@aoaochanchan-f00?logo=youtube&logoColor=fff" alt="youtube">
     </a>
   </p>
 
