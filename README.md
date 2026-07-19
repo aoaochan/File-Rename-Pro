@@ -1,7 +1,7 @@
 <div align="center">  
 
   <h1>
-    <img src=".docs/icon.png" alt="icon" width="25%">
+    <img src=".docs/Icon.png" alt="icon" width="25%">
     <br>
     File Rename Pro
   </h1>
