@@ -1,88 +1,132 @@
-<div align="center">  
+<!-- ========================================================= -->
+<!-- 1. Header -->
+<!-- ========================================================= -->
 
+<div align="center">  
+  <!-- --------------------------------------------------------- -->
+  <!-- 1-1. Hola! -->
+  <!-- --------------------------------------------------------- -->
   <h1>
+    <!-- Icon -->
     <img src=".docs/Icon.png" alt="icon" width="25%">
     <br>
+    <!-- Project Title -->
     File Rename Pro
   </h1>
 
+  <!-- --------------------------------------------------------- -->
+  <!-- 1-2. Description -->
+  <!-- --------------------------------------------------------- -->
   <strong>A lightweight desktop application for batch renaming files.</strong>
 
+  <!-- --------------------------------------------------------- -->
+  <!-- 1-3. SNS Badges -->
+  <!-- --------------------------------------------------------- -->
   <p align="center">
+      <!-- X (Twitter) -->
       <a href="https://x.com/aoaochanchan_">
       <img src="https://shields.io/badge/@aoaochanchan__-111?logo=x&logoColor=fff" alt="x">
     </a>
+    <!-- Bluesky -->
     <a href="https://bsky.app/profile/aoaoaoaochan.bsky.social">
       <img src="https://shields.io/badge/@aoaoaoaochan.bsky.social-01A5FF?logo=bluesky&logoColor=E6F2FF" alt="bluesky">
     </a>
+    <!-- Youtube -->
     <a href="https://www.youtube.com/@aoaochanchan">
       <img src="https://shields.io/badge/@aoaochanchan-f00?logo=youtube&logoColor=fff" alt="youtube">
     </a>
   </p>
 
+  <!-- --------------------------------------------------------- -->
+  <!-- 1-4. Banner Image -->
   <img src=".docs/banner.png" alt="File Rename Pro Banner" width="100%">
+  <!-- --------------------------------------------------------- -->
 
+  <!-- --------------------------------------------------------- -->
+  <!-- 1-5. Download Section -->
+  <!-- --------------------------------------------------------- -->
   <h2>Download</h2>
 
   <p align="center">
-    <!--Windows 11-->
+    <!-- Windows 11 -->
+    <!-- .msi (Windows 11 | x64) -->
     <a href="https://google.com">
+      <!-- Memo (2026-07-19 16:40): shields.io doesn't have microsoft and windows icon. Damn! -->
       <img src="https://shields.io/badge/.msi_(Windows_11_%7C_x64)-08a1f7?logo=tauri&logoColor=fff" alt="Download .msi for Windows 11">
     </a>
     <br>
     <br>
-    <!--macOS-->
+    <!-- macOS -->
+    <!-- .dmg (Apple Silicon | arm64) -->
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" width="26" height="1">
     <a href="https://google.com">
       <img src="https://shields.io/badge/.dmg_(Apple_Silicon_%7C_arm64)-e8e8e8?logo=apple&logoColor=808080" alt="Download .dmg for Apple Silicon">
     </a>
+    <!-- .dmg (Universal | x64 | arm64) -->
     <a href="https://google.com">
       <img src="https://shields.io/badge/.dmg_(Universal_%7C_x64_%7C_arm64)-e8e8e8?logo=apple&logoColor=808080" alt="Download .dmg for">
     </a>
     <br>
     <br>
-    <!--Linux (.AppImage)-->
+    <!-- Linux -->
+    <!-- .AppImage (Linux | arm64) -->
     <a href="https://google.com">
       <img src="https://shields.io/badge/.AppImage_(Linux_%7C_arm64)-222427?logo=linux&logoColor=F9E94E" alt="Download .AppImage for arm64 Linux">
     </a>
+    <!-- .AppImage (Linux | x64) -->
     <a href="https://google.com">
       <img src="https://shields.io/badge/.AppImage_(Linux_%7C_x64)-222427?logo=linux&logoColor=F9E94E" alt="Download .AppImage for x64 Linux">
     </a>
     <br>
-    <!--Debian-based Linux-->
+    <!-- .deb (Debian-based | arm64) -->
     <a href="https://google.com">
-      <img src="https://shields.io/badge/.deb_(Debian--based_%7C_arm64)-6b0027?logo=debian&logoColor=D80150" alt="Download .AppImage for arm64 Debian-based Linux">
+      <img src="https://shields.io/badge/.deb_(Debian--based_%7C_arm64)-6b0027?logo=debian&logoColor=D80150" alt="Download .deb for arm64 Debian-based Linux">
     </a>
+    <!-- .deb (Debian-based | x64) -->
     <a href="https://google.com">
-      <img src="https://shields.io/badge/.deb_(Debian--based_%7C_x64)-6b0027?logo=debian&logoColor=D80150" alt="Download .AppImage for x64 Debian-based Linux">
-    </a>
-    <br>
-    <!--RHEL-based Linux-->
-    <a href="https://google.com">
-      <img src="https://shields.io/badge/.rpm_(RHEL--based_%7C_arm64)-294172?logo=fedora&logoColor=3C6EB4" alt="Download .AppImage for arm64 RHEL-based Linux">
-    </a>
-    <a href="https://google.com">
-      <img src="https://shields.io/badge/.rpm_(RHEL--based_%7C_x64)-294172?logo=fedora&logoColor=3C6EB4" alt="Download .AppImage for x64 RHEL-based Linux">
+      <img src="https://shields.io/badge/.deb_(Debian--based_%7C_x64)-6b0027?logo=debian&logoColor=D80150" alt="Download .deb for x64 Debian-based Linux">
     </a>
     <br>
+    <!-- .rpm (RHEL-based | arm64) -->
+    <a href="https://google.com">
+      <img src="https://shields.io/badge/.rpm_(RHEL--based_%7C_arm64)-294172?logo=fedora&logoColor=3C6EB4" alt="Download .rpm for arm64 RHEL-based Linux">
+    </a>
+    <!-- .rpm (RHEL-based | x64) -->
+    <a href="https://google.com">
+      <img src="https://shields.io/badge/.rpm_(RHEL--based_%7C_x64)-294172?logo=fedora&logoColor=3C6EB4" alt="Download .rpm for x64 RHEL-based Linux">
+    </a>
     <br>
     <br>
+    <br>
+    <!-- Store -->
+    <!-- itch.io -->
     <a href="https://google.com">
-      <img src="https://shields.io/badge/Gumroad-222?logo=gumroad&logoColor=FF90E8" alt="Download .AppImage for arm64 Debian-based Linux">
+      <img src="https://shields.io/badge/itch.io-fa5c5c?logo=itch.io&logoColor=fff" alt="Download on the itch.io">
     </a>
+    <!-- Gumroad -->
     <a href="https://google.com">
-      <img src="https://shields.io/badge/itch.io-fa5c5c?logo=itch.io&logoColor=fff" alt="Download .AppImage for arm64 Debian-based Linux">
+      <img src="https://shields.io/badge/Gumroad-222?logo=gumroad&logoColor=FF90E8" alt="Download on the Gumraod">
     </a>
+    <!-- Payhip -->
     <a href="https://google.com">
-      <img src="https://shields.io/badge/Payhip-599AD7?logo=payhip&logoColor=fff" alt="Download .AppImage for arm64 Debian-based Linux">
+      <img src="https://shields.io/badge/Payhip-599AD7?logo=payhip&logoColor=fff" alt="Download on the Payhip">
     </a>
   </p>
 
   <br>
 </div>
 
+
 ---
 
+
+<!-- ========================================================= -->
+<!-- 2. Body -->
+<!-- ========================================================= -->
+
+<!-- --------------------------------------------------------- -->
+<!-- 2-1. Roadmap -->
+<!-- --------------------------------------------------------- -->
 ## Roadmap
 
 - [x] Sprint 1 - Basic Rename
@@ -93,8 +137,14 @@
 
 ---
 
+<!-- --------------------------------------------------------- -->
+<!-- 2-2. Features -->
+<!-- --------------------------------------------------------- -->
 ## Features
 
+<!-- --------------------------------------------------------- -->
+<!-- v0.3 -->
+<!-- --------------------------------------------------------- -->
 ### Sprint 3 (v0.3)
 - [x] Icon design update and implementation
   - [x] Generate Icon with Figma and Icon Composer
@@ -135,15 +185,22 @@
     - [ ] Oracle VirtualBox
     - [ ] Debian 12.15.0
     - [ ] Fedora Workstation 44
-- [ ] Deploy
-  - [ ] Github
-  - [ ] Gumroad
-  - [ ] itch.io
-  - [ ] Payhip
+- [ ] Payments
+  - [ ] Stripe
+  - [ ] Paypal
+- [ ] **Deploy**
+  - ~~[ ] Github~~
+  - [ ] **Gumroad**
+  - [ ] **itch.io**
+  - [ ] **Payhip**
 - [ ] Posting
   - [ ] X
   - [ ] Bluesky
-  - [ ] Youtube
+- [ ] Marketing
+  - [ ] Reddit
+  - [ ] Youtube Shorts
+  - [ ] TikTok
+  - [ ] Instagram Reels
 
 #### Fixed
 - Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".
@@ -161,6 +218,9 @@
 - ~~Need to change Linux version for build (glibc version issue)~~
   - Resolved: `Debian 12.15.0 → Ubuntu 22.04`, `Fedora 44 → Fedora 40`
 
+<!-- --------------------------------------------------------- -->
+<!-- v0.2 -->  
+<!-- --------------------------------------------------------- -->
 ### Sprint 2 (v0.2)
 - [x] Preview the changes
   - [x] Prevent files starting with '.' from being added.
@@ -172,6 +232,9 @@
 - Real-time file detection is not supported.
 - ~~A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.~~
 
+<!-- --------------------------------------------------------- -->
+<!-- v0.1 -->
+<!-- --------------------------------------------------------- -->
 ### Sprint 1 (v0.1)
 - [x] Select a folder
 - [x] Display File List
@@ -180,7 +243,13 @@
 #### Known Issues
 - ~~Hidden files are unintentionally renamed.~~
 
+
 ---
+
+
+<!-- ========================================================= -->
+<!-- 3. Footer -->
+<!-- ========================================================= -->
 
 ## Built With
 - Tauri
