@@ -23,8 +23,8 @@
   <!-- 1-3. SNS Badges -->
   <!-- --------------------------------------------------------- -->
   <p align="center">
-      <!-- X (Twitter) -->
-      <a href="https://x.com/aoaochanchan_">
+    <!-- X (Twitter) -->
+    <a href="https://x.com/aoaochanchan_">
       <img src="https://shields.io/badge/@aoaochanchan__-111?logo=x&logoColor=fff" alt="x">
     </a>
     <!-- Bluesky -->
