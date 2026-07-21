@@ -48,6 +48,19 @@
   <h2>Download</h2>
 
   <p align="center">
+    <!-- Warning -->
+    <strong>💡 Notice for Linux Users</strong>
+    <br>
+    There is a known issue where the AppImage build fails to launch on certain RHEL-based Linux environments due to a graphics rendering error (<a href="https://github.com/tauri-apps/tauri/issues/11988">EGL_BAD_PARAMETER</a>).
+    <br>
+    <br>
+    <strong>We strongly recommend that users on RHEL-based distributions download the .rpm package instead.</strong>
+    <br>
+    <br>
+    This notice will be updated once the issue is resolved.
+    <br>
+    <hr>
+    <br>
     <!-- Store -->
     <!-- itch.io -->
     <a href="https://google.com">
@@ -150,29 +163,29 @@
   - [x] Generate Icon with Figma and Icon Composer
 - [x] Improving the build environment
   - [x] Monorepo Migration via npm Workspaces (app, tools)
-- [ ] Build
-  - [ ] Windows 11 (x64)
+- [x] Build
+  - [x] Windows 11 (x64)
   - [x] macOS
     - [x] Apple Silicon | arm64
     - [x] Universal | x64 | arm64
   - [x] Linux
-    - [ ] Common (.AppImage)
-      - [ ] x64
+    - [x] Common (.AppImage)
+      - [x] x64
       - [x] arm64
-    - [ ] Debian-based (.deb)
-      - [ ] x64
+    - [x] Debian-based (.deb)
+      - [x] x64
       - [x] arm64
-    - [ ] RHEL-based (.rpm)
-      - [ ] x64
+    - [x] RHEL-based (.rpm)
+      - [x] x64
       - [x] arm64
-- [ ] QA
-  - [ ] Windows 11
-  - [ ] macOS Tahoe
-  - [ ] Linux (Oracle VirtualBox) 
-    - [ ] Ubuntu 22.04
-    - [ ] Debian 12.15.0
-    - [ ] Fedora Workstation 40
-    - [ ] Fedora Workstation 44
+- [x] QA
+  - [x] Windows 11
+  - [x] macOS Tahoe
+  - [x] Linux (Oracle VirtualBox) 
+    - [x] Ubuntu 22.04
+    - [x] Debian 12.15.0
+    - [x] Fedora Workstation 40
+    - [x] Fedora Workstation 44
 - [ ] User Manual
   - [ ] PDF
   - [ ] Video (Youtube)
@@ -193,19 +206,21 @@
     - [ ] Instagram Reels
 
 #### Fixed
-- ✅ <span style="color: gray">Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".</span>
-- ✅ <span style="color: gray">Fixed a bug where renaming was still possible on the previous path after task completion.</span>
+- ✅ *Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".*
+- ✅ *Fixed a bug where renaming was still possible on the previous path after task completion.*
 
 #### Known Issues
-- ⚠️ Top menu requires updates, particularly on macOS
-- ⚠️ Program title is repeatedly displayed inside the message box on Linux. (Works correctly on Windows and macOS)
-- ✅ <span style="color: gray">Explore using Docker to make Linux builds simpler than using virtual machines.</span>
+- ⚠️ **AppImage fails to render UI on RHEL-based Linux distributions (Discovered on Fedora 44, though Fedora 40 functions normally)**
+  - **Reference: https://github.com/tauri-apps/tauri/issues/11988**
+- ⚠️ **Top menu requires updates, particularly on macOS**
+- ⚠️ **Program title is repeatedly displayed inside the message box on Linux. (Works correctly on Windows and macOS)**
+- ✅ *Explore using Docker to make Linux builds simpler than using virtual machines.*
   - ↪ Plan to use Docker
-- ✅ <span style="color: gray">Linux build process needs documentation.</span>
+- ✅ *Linux build process needs documentation.*
   - ↪ Anticipated to be fixed by adopting Docker and the builder subproject.
-- ✅ <span style="color: gray">Need a separate installation guide for Linux (dependencies, etc.).</span>
+- ✅ *Need a separate installation guide for Linux (dependencies, etc.).*
   - ↪ Also expected to be resolved by introducing the Docker-based build method.
-- ✅ <span style="color: gray">Need to change Linux version for build (glibc version issue)</span>
+- ✅ *Need to change Linux version for build (glibc version issue)*
   - ↪ Determined:
     Old|New
     -|-
@@ -222,11 +237,11 @@
   - [x] Prevent files starting with '.' from being added.
 
 #### Fixed
-- ✅ <span style="color: gray">Fixed a bug where hidden files were unintentionally renamed.</span>
+- ✅ *Fixed a bug where hidden files were unintentionally renamed.*
 
 #### Known Issues
-- ⚠️ Real-time file detection is not supported.
-- ✅ <span style="color: gray">A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.</span>
+- ⚠️ **Real-time file detection is not supported.**
+- ✅ *A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.*
   - ↪ Fixed in v0.3
 
 ---
@@ -240,7 +255,7 @@
 - [x] Rename
 
 #### Known Issues
-- ✅ <span style="color: gray">Hidden files are unintentionally renamed.</span>
+- ✅ *Hidden files are unintentionally renamed.*
   - ↪ Fixed in v0.2
 
 
