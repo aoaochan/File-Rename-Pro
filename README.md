@@ -48,6 +48,22 @@
   <h2>Download</h2>
 
   <p align="center">
+    <!-- Store -->
+    <!-- itch.io -->
+    <a href="https://google.com">
+      <img src="https://shields.io/badge/itch.io-fa5c5c?logo=itch.io&logoColor=fff" alt="Download on the itch.io">
+    </a>
+    <!-- Payhip -->
+    <a href="https://google.com">
+      <img src="https://shields.io/badge/Payhip-599AD7?logo=payhip&logoColor=fff" alt="Download on the Payhip">
+    </a>
+    <!-- Gumroad -->
+    <a href="https://google.com">
+      <img src="https://shields.io/badge/Gumroad-222?logo=gumroad&logoColor=FF90E8" alt="Download on the Gumraod">
+    </a>
+    <br>
+    <br>
+    <br>
     <!-- Windows 11 -->
     <!-- .msi (Windows 11 | x64) -->
     <a href="https://google.com">
@@ -95,22 +111,6 @@
     <a href="https://google.com">
       <img src="https://shields.io/badge/.rpm_(RHEL--based_%7C_x64)-294172?logo=fedora&logoColor=3C6EB4" alt="Download .rpm for x64 RHEL-based Linux">
     </a>
-    <br>
-    <br>
-    <br>
-    <!-- Store -->
-    <!-- itch.io -->
-    <a href="https://google.com">
-      <img src="https://shields.io/badge/itch.io-fa5c5c?logo=itch.io&logoColor=fff" alt="Download on the itch.io">
-    </a>
-    <!-- Gumroad -->
-    <a href="https://google.com">
-      <img src="https://shields.io/badge/Gumroad-222?logo=gumroad&logoColor=FF90E8" alt="Download on the Gumraod">
-    </a>
-    <!-- Payhip -->
-    <a href="https://google.com">
-      <img src="https://shields.io/badge/Payhip-599AD7?logo=payhip&logoColor=fff" alt="Download on the Payhip">
-    </a>
   </p>
 
   <br>
@@ -148,75 +148,73 @@
 ### Sprint 3 (v0.3)
 - [x] Icon design update and implementation
   - [x] Generate Icon with Figma and Icon Composer
-- [ ] User Manual
-  - [ ] PDF
-  - [ ] Video (Youtube)
-- [ ] Dockerized Linux Build Environments
-  - [ ] Dockerfile.ubuntu (.deb | .AppImage)
-    - [ ] `.\.docker\Dockerfile.ubuntu`
-  - [ ] Dockerfile.fedora (.rpm | .AppImage)
-    - [ ] `.\.docker\Dockerfile.fedora`
-- [ ] Create Builder Project (npm-workspace)
-  - [ ] `.\tools\package.json`
-  - [ ] `.\tools\builder.linux.js`
-  - [ ] Update npm scripts for build
-    - [ ] `npm run build:window`
-    - [ ] `npm run build:macOS`
-    - [ ] `npm run build:linux`
-- [ ] Build Installers
+- [x] Improving the build environment
+  - [x] Monorepo Migration via npm Workspaces (app, tools)
+    - [x] Test: npm run dev (`"dev": "npm run tauri dev --workspace=app"`)
+    - [x] Test: npm run build: (`"build": "npm run build --workspace=tools"`)
+- [ ] Build
   - [ ] Windows 11 (x64)
-  - [ ] macOS
-    - [ ] Apple Silicon | arm64
-    - [ ] Universal | x64 | arm64
-  - [ ] Linux
+  - [x] macOS
+    - [x] Apple Silicon | arm64
+    - [x] Universal | x64 | arm64
+  - [x] Linux
     - [ ] Common (.AppImage)
       - [ ] x64
-      - [ ] arm64
+      - [x] arm64
     - [ ] Debian-based (.deb)
       - [ ] x64
-      - [ ] arm64
+      - [x] arm64
     - [ ] RHEL-based (.rpm)
       - [ ] x64
-      - [ ] arm64
+      - [x] arm64
 - [ ] QA
   - [ ] Windows 11
   - [ ] macOS Tahoe
-  - [ ] Linux 
-    - [ ] Oracle VirtualBox
+  - [ ] Linux (Oracle VirtualBox) 
+    - [ ] Ubuntu 22.04
     - [ ] Debian 12.15.0
+    - [ ] Fedora Workstation 40
     - [ ] Fedora Workstation 44
+- [ ] User Manual
+  - [ ] PDF
+  - [ ] Video (Youtube)
+- [ ] ❗️ **Deploy**
+  - [ ] **itch.io**
+  - [ ] **Payhip**
+  - [ ] **Gumroad**
 - [ ] Payments
   - [ ] Stripe
   - [ ] Paypal
-- [ ] **Deploy**
-  - ~~[ ] Github~~
-  - [ ] **Gumroad**
-  - [ ] **itch.io**
-  - [ ] **Payhip**
-- [ ] Posting
+- [ ] Marketing
   - [ ] X
   - [ ] Bluesky
-- [ ] Marketing
   - [ ] Reddit
-  - [ ] Youtube Shorts
-  - [ ] TikTok
-  - [ ] Instagram Reels
+  - [ ] Video (Satisfying)
+    - [ ] Youtube Shorts
+    - [ ] TikTok
+    - [ ] Instagram Reels
 
 #### Fixed
-- Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".
-- Fixed a bug where renaming was still possible on the previous path after task completion.
+- ✅ <span style="opacity: 0.5">Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".</span>
+- ✅ <span style="opacity: 0.5">Fixed a bug where renaming was still possible on the previous path after task completion.</span>
 
 #### Known Issues
-- Top menu requires updates, particularly on macOS
-- Program title is repeatedly displayed inside the message box on Linux. (Works correctly on Windows and macOS)
-- ~~Explore using Docker to make Linux builds simpler than using virtual machines.~~
-  - Plan to use Docker
-- ~~Linux build process needs documentation.~~
-  - Anticipated to be fixed by adopting Docker and the builder subproject.
-- ~~Need a separate installation guide for Linux (dependencies, etc.).~~
-  - Also expected to be resolved by introducing the Docker-based build method.
-- ~~Need to change Linux version for build (glibc version issue)~~
-  - Resolved: `Debian 12.15.0 → Ubuntu 22.04`, `Fedora 44 → Fedora 40`
+- ⚠️ Top menu requires updates, particularly on macOS
+- ⚠️ Program title is repeatedly displayed inside the message box on Linux. (Works correctly on Windows and macOS)
+- ✅ <span style="opacity: 0.5">Explore using Docker to make Linux builds simpler than using virtual machines.</span>
+  - ↪ Plan to use Docker
+- ✅ <span style="opacity: 0.5">Linux build process needs documentation.</span>
+  - ↪ Anticipated to be fixed by adopting Docker and the builder subproject.
+- ✅ <span style="opacity: 0.5">Need a separate installation guide for Linux (dependencies, etc.).</span>
+  - ↪ Also expected to be resolved by introducing the Docker-based build method.
+- ✅ <span style="opacity: 0.5">Need to change Linux version for build (glibc version issue)</span>
+  - ↪ Determined:
+    Old|New
+    -|-
+    Debian 12.15.0|**Ubuntu 22.04**
+    Fedora 44|**Fedora 40**
+
+---
 
 <!-- --------------------------------------------------------- -->
 <!-- v0.2 -->  
@@ -226,11 +224,14 @@
   - [x] Prevent files starting with '.' from being added.
 
 #### Fixed
-- Fixed a bug where hidden files were unintentionally renamed.
+- ✅ <span style="opacity: 0.5">Fixed a bug where hidden files were unintentionally renamed.</span>
 
 #### Known Issues
-- Real-time file detection is not supported.
-- ~~A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.~~
+- ⚠️ Real-time file detection is not supported.
+- ✅ <span style="opacity: 0.5">A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.</span>
+  - ↪ Fixed in v0.3
+
+---
 
 <!-- --------------------------------------------------------- -->
 <!-- v0.1 -->
@@ -241,7 +242,8 @@
 - [x] Rename
 
 #### Known Issues
-- ~~Hidden files are unintentionally renamed.~~
+- ✅ <span style="opacity: 0.5">Hidden files are unintentionally renamed.</span>
+  - ↪ Fixed in v0.2
 
 
 ---
@@ -253,4 +255,4 @@
 
 ## Built With
 - Tauri
-- Vanilla (HTML/CSS/JS)
+- Vanilla (HTML/CSS/JavaScript)

@@ -1,0 +1,23 @@
+# syntax=docker/dockerfile:1.7
+FROM fedora:40
+
+RUN --mount=type=cache,target=/var/cache/dnf,sharing=locked \
+    dnf -y update && dnf -y groupinstall "Development Tools" && dnf -y install \
+    wget curl git patchelf openssl-devel rpm-build \
+    webkit2gtk4.1-devel gtk3-devel libappindicator-gtk3-devel librsvg2-devel \
+    xdg-utils
+
+# RUN dnf -y module install nodejs:20
+RUN curl -fsSL https://rpm.nodesource.com/setup_24.x | bash - \
+    && dnf install -y nodejs
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+WORKDIR /workspace/app
+
+# CMD ["sh", "-c", "npm ci && npm run tauri build -- --bundles rpm"]
+
+CMD ["sh", "-c", "npm ci && npm run tauri build -- --bundles rpm && \
+     mkdir -p /workspace/app/src-tauri/target/release/bundle && \
+     cp -r /cache/target/release/bundle/. /workspace/app/src-tauri/target/release/bundle/"]

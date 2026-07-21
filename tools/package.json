@@ -1,0 +1,8 @@
+{
+  "name": "File-Rename-Pro-tools",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node index.js"
+  }
+}

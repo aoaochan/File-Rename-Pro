@@ -1,15 +1,19 @@
 {
-  "name": "File Rename Pro",
-  "private": true,
-  "version": "0.3.0",
-  "type": "module",
-  "scripts": {
-    "tauri": "tauri"
-  },
-  "devDependencies": {
-    "@tauri-apps/cli": "^2"
-  },
-  "dependencies": {
-    "@tauri-apps/plugin-dialog": "^2.7.1"
-  }
+    "name": "File-Rename-Pro",
+    "private": "true",
+    "version": "0.3.0",
+    "author": {
+        "name": "aoaochan",
+        "email": "josejbeck99@gmail.com"
+    },
+    "description": "A lightweight desktop application for batch renaming files.",
+    "license": "MIT",
+    "workspaces": [
+        "app",
+        "tools"
+    ],
+    "scripts": {
+        "dev": "npm run tauri dev --workspace=app",
+        "build": "npm run build --workspace=tools"
+    }
 }

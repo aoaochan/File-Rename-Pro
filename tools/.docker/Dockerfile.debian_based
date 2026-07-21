@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1.7
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV APPIMAGE_EXTRACT_AND_RUN=1
+
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y \
+    ca-certificates curl wget build-essential file libssl-dev git patchelf \
+    libgtk-3-dev libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev \
+    xdg-utils
+
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && apt-get install -y nodejs
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+WORKDIR /workspace/app
+
+# CMD ["sh", "-c", "npm ci && npm run tauri build -- --bundles deb,appimage"]
+
+CMD ["sh", "-c", "npm ci && npm run tauri build -- --bundles deb,appimage && \
+     mkdir -p /workspace/app/src-tauri/target/release/bundle && \
+     cp -r /cache/target/release/bundle/. /workspace/app/src-tauri/target/release/bundle/"]
