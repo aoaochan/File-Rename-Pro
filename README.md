@@ -150,8 +150,6 @@
   - [x] Generate Icon with Figma and Icon Composer
 - [x] Improving the build environment
   - [x] Monorepo Migration via npm Workspaces (app, tools)
-    - [x] Test: npm run dev (`"dev": "npm run tauri dev --workspace=app"`)
-    - [x] Test: npm run build: (`"build": "npm run build --workspace=tools"`)
 - [ ] Build
   - [ ] Windows 11 (x64)
   - [x] macOS
@@ -195,19 +193,19 @@
     - [ ] Instagram Reels
 
 #### Fixed
-- ✅ <span style="opacity: 0.5">Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".</span>
-- ✅ <span style="opacity: 0.5">Fixed a bug where renaming was still possible on the previous path after task completion.</span>
+- ✅ <span style="color: gray">Fixed an issue where the file name incorrectly displays as "FileRenamePro" instead of "File Rename Pro".</span>
+- ✅ <span style="color: gray">Fixed a bug where renaming was still possible on the previous path after task completion.</span>
 
 #### Known Issues
 - ⚠️ Top menu requires updates, particularly on macOS
 - ⚠️ Program title is repeatedly displayed inside the message box on Linux. (Works correctly on Windows and macOS)
-- ✅ <span style="opacity: 0.5">Explore using Docker to make Linux builds simpler than using virtual machines.</span>
+- ✅ <span style="color: gray">Explore using Docker to make Linux builds simpler than using virtual machines.</span>
   - ↪ Plan to use Docker
-- ✅ <span style="opacity: 0.5">Linux build process needs documentation.</span>
+- ✅ <span style="color: gray">Linux build process needs documentation.</span>
   - ↪ Anticipated to be fixed by adopting Docker and the builder subproject.
-- ✅ <span style="opacity: 0.5">Need a separate installation guide for Linux (dependencies, etc.).</span>
+- ✅ <span style="color: gray">Need a separate installation guide for Linux (dependencies, etc.).</span>
   - ↪ Also expected to be resolved by introducing the Docker-based build method.
-- ✅ <span style="opacity: 0.5">Need to change Linux version for build (glibc version issue)</span>
+- ✅ <span style="color: gray">Need to change Linux version for build (glibc version issue)</span>
   - ↪ Determined:
     Old|New
     -|-
@@ -224,11 +222,11 @@
   - [x] Prevent files starting with '.' from being added.
 
 #### Fixed
-- ✅ <span style="opacity: 0.5">Fixed a bug where hidden files were unintentionally renamed.</span>
+- ✅ <span style="color: gray">Fixed a bug where hidden files were unintentionally renamed.</span>
 
 #### Known Issues
 - ⚠️ Real-time file detection is not supported.
-- ✅ <span style="opacity: 0.5">A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.</span>
+- ✅ <span style="color: gray">A bug has been identified where renaming is still possible on the previous path, even though a reset is executed after task completion.</span>
   - ↪ Fixed in v0.3
 
 ---
@@ -242,7 +240,7 @@
 - [x] Rename
 
 #### Known Issues
-- ✅ <span style="opacity: 0.5">Hidden files are unintentionally renamed.</span>
+- ✅ <span style="color: gray">Hidden files are unintentionally renamed.</span>
   - ↪ Fixed in v0.2
 
 
