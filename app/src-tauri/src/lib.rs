@@ -2,6 +2,7 @@
 // 1. Requires
 // =====================================================================================================
 use rfd::FileDialog;
+use tauri::menu::{MenuBuilder, SubmenuBuilder};
 use std::path::PathBuf;
 use std::sync::Mutex;
 
@@ -136,6 +137,25 @@ pub fn run() {
         .plugin(tauri_plugin_dialog::init())
         .manage(FolderState::default())
         .invoke_handler(tauri::generate_handler![select_folder, rename_files])
+        .setup(|app| {
+            // -----------------------------------------------------------------------------------------------------
+            // 4-1. Native application menus
+            // -----------------------------------------------------------------------------------------------------
+            let file_menu = SubmenuBuilder::new(app, "File")
+                .text("new", "New")
+                .text("select_folder", "Select Folder")
+                .text("rename", "Rename")
+                .text("exit", "Exit")
+                .build()?;
+
+            let menu = MenuBuilder::new(app)
+                .items(&[&file_menu])
+                .build()?;
+
+            app.set_menu(menu)?;
+
+            Ok(())
+        })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
